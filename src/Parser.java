@@ -5,15 +5,16 @@ public class Parser {
     private int num1;
     private int num2;
     private char operation;
-
-    Scanner scanner = new Scanner(System.in);
+    private boolean flag;
+    private int NegativeRoman;
 
     public void pars() {
 
         try {
+            Scanner scanner = new Scanner(System.in);
             String text = scanner.nextLine();
             String[] blocks = text.split(" ");
-            operation = blocks[1].charAt(0);
+
             if (RomanNumbers.sortRoman(text)) {
                 num1 = RomanNumbers.romanToArabic(blocks[0]);
                 num2 = RomanNumbers.romanToArabic(blocks[2]);
@@ -21,6 +22,14 @@ public class Parser {
                 num1 = Integer.parseInt(blocks[0]);
                 num2 = Integer.parseInt(blocks[2]);
             }
+            operation = blocks[1].charAt(0);
+            flag = RomanNumbers.sortRoman(text);
+
+            if (operation == '-' && flag){
+                NegativeRoman=num1-num2;
+            System.out.println(+getNegativeRoman());
+            }
+
         } catch(RuntimeException e) {
             throw new IllegalArgumentException("Неверный формат");
         }
@@ -39,5 +48,14 @@ public class Parser {
 
     public char getOperation() {
         return operation;
+    }
+
+    public boolean getFlag() {
+        return flag;
+    }
+
+
+    public int getNegativeRoman() {
+        return NegativeRoman;
     }
 }
