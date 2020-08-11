@@ -6,7 +6,6 @@ public class Parser {
     private int num2;
     private char operation;
     private boolean flag;
-    private int NegativeRoman;
 
     public void pars() {
 
@@ -49,8 +48,4 @@ public class Parser {
         return flag;
     }
 
-
-    public int getNegativeRoman() {
-        return NegativeRoman;
-    }
 }
