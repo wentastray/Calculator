@@ -25,11 +25,6 @@ public class Parser {
             operation = blocks[1].charAt(0);
             flag = RomanNumbers.sortRoman(text);
 
-            if (operation == '-' && flag){
-                NegativeRoman=num1-num2;
-            System.out.println(Numeral.romanToArabicAnswer(+getNegativeRoman()));
-            }
-
         } catch(RuntimeException e) {
             throw new IllegalArgumentException("Неверный формат");
         }

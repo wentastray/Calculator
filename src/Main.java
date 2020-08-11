@@ -7,8 +7,6 @@ public class Main {
 
         Parser reader = new Parser();
 
-
-
         while (true) {
             try {
                 reader.pars();
@@ -21,7 +19,6 @@ public class Main {
                 if (!reader.getFlag())
                     System.out.println(result);
                 else System.out.println(Numeral.romanToArabicAnswer(result));
-
 
         }
     }
