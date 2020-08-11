@@ -6,6 +6,7 @@ public class Parser {
     private int num2;
     private char operation;
     private boolean flag;
+    private int negativeRoman;
 
     public void pars() {
 
@@ -23,6 +24,11 @@ public class Parser {
             }
             operation = blocks[1].charAt(0);
             flag = RomanNumbers.sortRoman(text);
+
+            if (operation == '-' && flag){
+                negativeRoman=num1-num2;
+
+            }
 
         } catch(RuntimeException e) {
             throw new IllegalArgumentException("Неверный формат");
@@ -48,4 +54,8 @@ public class Parser {
         return flag;
     }
 
+
+    public int getNegativeRoman() {
+        return negativeRoman;
+    }
 }

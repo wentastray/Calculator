@@ -22,6 +22,5 @@ public enum Numeral {
                 }
             }
             return buf.toString();
-
     }
 }
