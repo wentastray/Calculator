@@ -6,7 +6,6 @@ public class Parser {
     private int num2;
     private char operation;
     private boolean flag;
-    private int negativeRoman;
 
     public void pars() {
 
