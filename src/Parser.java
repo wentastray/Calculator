@@ -27,7 +27,7 @@ public class Parser {
 
             if (operation == '-' && flag){
                 NegativeRoman=num1-num2;
-            System.out.println(+getNegativeRoman());
+            System.out.println(Numeral.romanToArabicAnswer(+getNegativeRoman()));
             }
 
         } catch(RuntimeException e) {
